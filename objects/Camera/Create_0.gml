@@ -49,3 +49,5 @@ for (var i = 0; i < n; i++) {
 surf_depth = surface_create(window_get_width(), window_get_height(), surface_r32float);
 surf_blur_h = surface_create(window_get_width(), window_get_height());
 surf_blur = surface_create(window_get_width(), window_get_height());
+
+focus_depth = 500;
