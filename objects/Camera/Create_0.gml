@@ -46,8 +46,11 @@ for (var i = 0; i < n; i++) {
     };
 }
 
-surf_depth = surface_create(window_get_width(), window_get_height(), surface_r32float);
-surf_blur_h = surface_create(window_get_width(), window_get_height());
-surf_blur = surface_create(window_get_width(), window_get_height());
+var surf_width = surface_get_width(application_surface);
+var surf_height = surface_get_height(application_surface);
+
+surf_depth = surface_create(surf_width, surf_height, surface_r32float);
+surf_blur_h = surface_create(surf_width, surf_height);
+surf_blur = surface_create(surf_width, surf_height);
 
 focus_depth = 500;
