@@ -45,3 +45,5 @@ for (var i = 0; i < n; i++) {
         y: random_range(0, 900),
     };
 }
+
+surf_depth = surface_create(window_get_width(), window_get_height(), surface_r32float);

@@ -21,6 +21,7 @@ camera_apply(camera);
 
 shader_set(shd_basic_3d_stuff);
 shader_set_uniform_f(shader_get_uniform(shd_basic_3d_stuff, "lightDirection"), 1, 1, -1);
+surface_set_target_ext(1, surf_depth);
 draw_clear(c_black);
 
 scr_draw_all_the_stuff();

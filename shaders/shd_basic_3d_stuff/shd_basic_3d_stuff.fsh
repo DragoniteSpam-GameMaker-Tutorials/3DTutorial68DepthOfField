@@ -2,6 +2,7 @@ varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 
 varying vec3 v_worldPosition;
+varying float v_depth;
 
 uniform vec3 lightDirection;
 
@@ -18,5 +19,6 @@ void main() {
     float NdotL = max(0.0, -dot(world_normal, lightDirection));
     
     vec4 final_color = starting_color * vec4(min(lightAmbient + NdotL, vec4(1)).rgb, starting_color.a);
-    gl_FragColor = final_color;
+    gl_FragData[0] = final_color;
+    gl_FragData[1] = vec4(v_depth, 0, 0, 1);
 }
