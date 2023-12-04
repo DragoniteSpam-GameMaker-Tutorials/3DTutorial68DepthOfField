@@ -7,6 +7,7 @@
     {"name":"shd_blur_v","order":1,"path":"shaders/shd_blur_v/shd_blur_v.yy",},
     {"name":"spr_grass","order":4,"path":"sprites/spr_grass/spr_grass.yy",},
     {"name":"load_model","order":1,"path":"scripts/load_model/load_model.yy",},
+    {"name":"shd_dof","order":19,"path":"shaders/shd_dof/shd_dof.yy",},
     {"name":"ts_main","order":11,"path":"tilesets/ts_main/ts_main.yy",},
     {"name":"fnt_game","order":2,"path":"fonts/fnt_game/fnt_game.yy",},
     {"name":"screen_to_world","order":2,"path":"scripts/screen_to_world/screen_to_world.yy",},

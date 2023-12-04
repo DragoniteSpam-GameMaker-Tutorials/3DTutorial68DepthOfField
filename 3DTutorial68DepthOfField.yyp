@@ -33,6 +33,7 @@
     {"id":{"name":"spr_grass","path":"sprites/spr_grass/spr_grass.yy",},},
     {"id":{"name":"vertex_add_point","path":"scripts/vertex_add_point/vertex_add_point.yy",},},
     {"id":{"name":"load_model","path":"scripts/load_model/load_model.yy",},},
+    {"id":{"name":"shd_dof","path":"shaders/shd_dof/shd_dof.yy",},},
     {"id":{"name":"ts_main","path":"tilesets/ts_main/ts_main.yy",},},
     {"id":{"name":"fnt_game","path":"fonts/fnt_game/fnt_game.yy",},},
     {"id":{"name":"screen_to_world","path":"scripts/screen_to_world/screen_to_world.yy",},},

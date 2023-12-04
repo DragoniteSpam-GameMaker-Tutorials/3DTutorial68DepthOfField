@@ -1,5 +1,4 @@
-draw_surface_stretched(application_surface, 0, 0, window_get_width(), window_get_height());
-
+#region initial setup
 var surf_width = surface_get_width(application_surface);
 var surf_height = surface_get_height(application_surface);
 
@@ -21,4 +20,19 @@ shader_set_uniform_f(shader_get_uniform(shd_blur_v, "texture_size"), surf_width,
 shader_set_uniform_f(shader_get_uniform(shd_blur_v, "blur_radius"), 10);
 draw_surface(surf_blur_h, 0, 0);
 surface_reset_target();
+shader_reset();
+#endregion
+
+shader_set(shd_dof);
+
+texture_set_stage(shader_get_sampler_index(shd_dof, "sampDepth"), surface_get_texture(surf_depth));
+texture_set_stage(shader_get_sampler_index(shd_dof, "sampBlur"), surface_get_texture(surf_blur));
+shader_set_uniform_f(shader_get_uniform(shd_dof, "u_near"), 100);
+shader_set_uniform_f(shader_get_uniform(shd_dof, "u_far"), 500);
+shader_set_uniform_f(shader_get_uniform(shd_dof, "u_focus"), 500);
+
+
+draw_surface(application_surface, 0, 0);
+
+
 shader_reset();
